@@ -1,6 +1,10 @@
 const form = document.getElementById ('form-valor');
 const primeiroCampo = document.getElementById('campoA');
+const segundoCampo = document.getElementById('campoB');
+const containerMensagemErro = document.querySelector('.error-message');
+const containerMensagemSucesso = document.querySelector('.sucss-message');
 let formNvalido = false;
+
 
 
 form.addEventListener ('submit', function(e) {
@@ -10,7 +14,6 @@ form.addEventListener ('submit', function(e) {
         let naoValido = campoB < campoA
         return naoValido
     }
-    
     let campoA = document.getElementById('campoA').value
     campoA = parseInt (campoA)
     let campoB = document.getElementById('campoB').value
@@ -18,8 +21,7 @@ form.addEventListener ('submit', function(e) {
 
     const mensagemSucss = `<b> Tudo certo ! O segundo valor é maior que o primeiro, Parabéns ! </b>`
     const mensagemErro = `<b> ERRO, O primeiro valor é maior que o segundo valor </b> !`
-    const segundoCampo = document.getElementById('campoB');
-
+    
     formNvalido = compara (campoA,campoB)
 
     if (formNvalido){
@@ -37,5 +39,16 @@ form.addEventListener ('submit', function(e) {
 
 })
 
+segundoCampo,primeiroCampo.addEventListener('keyup', function (e) {
+    console.log(e.target.value);
+    formNvalido = (e.target.value)
+
+    if (formNvalido == ''){
+        primeiroCampo.style.border = 'none';
+        containerMensagemErro.style.display = 'none';
+        containerMensagemSucesso.style.display = 'none';
+        segundoCampo.style.border = 'none'
+    }
+});
 
 
