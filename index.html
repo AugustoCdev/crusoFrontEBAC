@@ -4,22 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML com JS</title>
+    <title>Agenda de contatos</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
+        <div class="display">
     <header>
-        <h1>Exercício JS</h1>
+        <h1>Contatos</h1>
     </header>
-        <form id="form-valor">
-            <input id="campoA" type="number" placeholder="Digite o primeiro valor " required />
-            <p class="error-message"> </p>
-            <input id="campoB" type="number" placeholder="Digite o segundo valor " required />
-            <p class="sucss-message"> </p>
-            <button type="submit">Enviar</button>
-        </form>
+    <form id="formulario">
+        <input type="text" placeholder="Nome" required id="nome"></input>
+        <input type="tel" placeholder="Telefone" required id="tel"></input>
+        <button type="submit">Cadastrar +</button>
+    </form>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
     </div>
-    <script src="main.js"></script>
+    </div>
+        <script src="main.js"></script>
 </body>
 </html>

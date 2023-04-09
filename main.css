@@ -1,71 +1,77 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .container{
-    justify-content: space-between;
-    max-width: 1280px;
+    max-width: 960px;
     width: 100% ;
-    margin: 0 auto;
 }
 
-h1{
-    font-size: 50px;
-    background-color: gold;
-    color: rgb(0, 0, 0);
-    margin-bottom: 30px;
+.display{
+    margin: 150px auto; 
+    height: 600px;
+    background-color: rgb(96, 91, 91);
+    border-radius: 30px;
+    margin-right: 300px;
+    margin-left: 100px;
+    display:inline-block;
 }
 
-.container form{
-    display: block;
-    width: 320px;
-    margin-bottom: 8px;
-    padding: 8px;
-    background-color: rgba(16, 192, 192, 0.796);
-    height: 300px;
+header h1{
+    padding: 16px 0;
+    font-weight: bolder;
+
+
+}
+
+body{
+    margin-left: 400px;
+    text-align: center;
 }
 
 form input{
-    width: 300px;
-    height: 35px;
-    margin-bottom: 10px;
+    font-size: 15px;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+
+button{
+    background-color: rgb(3, 91, 3);
+    color: wheat;
     font-size: 15px;
     border: none;
-
+    border-bottom: 20px;
+    padding: 8px;
+    border-radius: 10px;
 }
 
-form button{
-    font-size:20px;
-    display: block;
-    margin-top: 9px;
-    background-color: rgb(9, 190, 255);
-    color: #fff;
-    border: none;
+button:hover{
+    background-color: rgba(3, 91, 3, 0.6);
     cursor: pointer;
 }
-form button:hover{
-    background-color: rgb(69, 69, 215);
+
+table {
+    width: 100%;
+    font-size: 18px;
+    margin-top: 30px;
+
 }
 
-.error-message{
-    font-size: 12px;
-    background-color: red;
-    color: #fff;
-    padding: 8px;
-    margin-bottom: 8px;
-    border-radius: 60px;
-    display: none;
+table th{
+    font-size: 23px;
+    border-bottom: 2px solid #000;
 }
 
-.sucss-message{
-    font-size: 12px;
-    background-color:green;
-    color: #fff;
-    padding: 8px;
-    margin-bottom: 8px;
-    border-radius: 60px;
-    display: none;
-
+table td{
+    padding-top: 15px;
+    border-bottom: 2px solid #0000004b;
 }
